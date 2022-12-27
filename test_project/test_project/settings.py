@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hello',
     'portfolio',
-    'catalogo'
+    'catalogo',
+    'compraEnCafa'
 ]
 
 MIDDLEWARE = [
@@ -60,8 +61,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 'DIRS': ['hello/templates/'],
-        'DIRS': ['catalogo/templates/'],
+        # 'DIRS': ['catalogo/templates/'],
         # 'DIRS': ['portfolio/templates/'],
+        'DIRS': ['compraEnCafa/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
