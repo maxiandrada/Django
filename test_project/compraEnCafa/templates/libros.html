@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 	<h1>Listado</h1>
-	{% if libros %}
+	{% if Noticias %}
 	<ul>
-		{% for libro in libros %}
+		{% for Noticia in Noticias %}
 			<li>
-				<a href="{ % url 'libro' libro.id %}">{{ libro.titulo }}</a> ({{libro.autor}})
+				<a href="{ % url 'Noticia' libro.id %}">{{ libro.titulo }}</a> ({{libro.autor}})
 			</li>
 		{% endfor %}
 	</ul>
