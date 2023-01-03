@@ -40,9 +40,9 @@ crossorigin="anonymous"></script>
 				{% block sidebar %}
 				<ul class="sidebar-nav">
 					<li><a href="{% url 'index' %}">Home</a></li>
-					<li><a href="">Todos los Negocios</a></li>
+					<li><a href="{% url 'negocios' %}">Todos los Negocios</a></li>
 					<li><a href="{% url 'noticias' %}">Todas las Noticias</a></li>
-					<!-- <li><a href="{% url 'generos' %}">Todas los Generos</a></li> -->
+					
 				</ul>
 				{% endblock %}
 			</div>

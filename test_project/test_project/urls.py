@@ -22,7 +22,7 @@ from django.urls import path, include
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', include('hello.urls')),
+    # path('', include('hello.urls')),
     # path('portfolio/', include('portfolio.urls')),
     # path('catalogo/admin/', admin.site.urls),
     # path('catalogo/', include('catalogo.urls')),
@@ -30,4 +30,5 @@ urlpatterns = [
     # path('generos/', views.GeneroListView.as_view(), name='generos'),
     path('compraEnCafa/admin', admin.site.urls),
     path('compraEnCafa/', include('compraEnCafa.urls')),
+    path('', include('compraEnCafa.urls')),
 ]
