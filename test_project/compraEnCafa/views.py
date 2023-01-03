@@ -46,3 +46,14 @@ def negocios(request):
 	}
 
 	return render(request, 'negocios.html',context)
+
+def usuarios(request):
+	nroNegocios=Negocio.objects.all().count()
+	nroNoticias=Noticia.objects.all().count()
+
+	context = {
+		'nroNegocios':nroNegocios,
+		'nroNoticias':nroNoticias,
+	}
+
+	return render(request, 'negocios.html',context)
