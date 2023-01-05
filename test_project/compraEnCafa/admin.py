@@ -13,7 +13,7 @@ class NegocioAdmin(admin.ModelAdmin):
 	list_filter = ('nombre', 'mail')
 
 class NoticiaAdmin(admin.ModelAdmin):
-	list_display = ('titulo', 'fecha', 'noticia_choice')
+	list_display = ('titulo', 'fecha', 'noticia_choice', 'imagePortada')
 	
 	# list_filter = ('titulo', 'autor', 'genero')
 	

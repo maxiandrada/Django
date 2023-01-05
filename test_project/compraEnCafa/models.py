@@ -34,6 +34,8 @@ class Noticia(models.Model):
 	noticia_choice = models.CharField(max_length=50, choices=TIPO_NOTICIA, blank=True, default='d',
 							help_text='Seccion de Noticia')
 	
+	imagePortada = models.ImageField(default='')
+
 	# class Meta:
 	# 	ordering = ["fechaDevolucion"]
 	

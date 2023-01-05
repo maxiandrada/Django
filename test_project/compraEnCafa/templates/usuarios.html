@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1>Compra en Cafa (usuarios)</h1>
+	<p>Bienvenidos a <em>CompraEnCafa</em>, una aplicación web desarrollada en Django.</p>
+	<h2>Contenido dinámico</h2>
+	<p>Nuestro catálogo se forma de :</p>
+	<ul>
+		<li><strong>Negocios:</strong> {{ nroNegocios }}</li>
+		<li><strong>Noticias:</strong> {{ nroNoticias }}</li>
+	</ul>
+{% endblock %}

@@ -7,7 +7,7 @@ from django.shortcuts import render
 # def index(request):
 # 	return render(request, 'index.html', {})
 
-from compraEnCafa.models import Negocio, Noticia
+from compraEnCafa.models import Negocio, Noticia, Usuario
 
 def index(request):
 	nroNegocios=Negocio.objects.all().count()
@@ -26,15 +26,22 @@ def index(request):
 	return render(request, 'index.html',context)
 
 def noticias(request):
-	nroNegocios=Negocio.objects.all().count()
-	nroNoticias=Noticia.objects.all().count()
+	notices = Noticia.objects.all()
 
 	context = {
-		'nroNegocios':nroNegocios,
-		'nroNoticias':nroNoticias,
+		'notices': notices
 	}
 
 	return render(request, 'noticias.html',context)
+
+def noticiaDetalles(request, pk):
+	notice = Noticia.objects.get(pk=pk)
+
+	context = {
+		'notice': notice
+	}
+
+	return render(request, 'noticiaDetalles.html', context)
 
 def negocios(request):
 	nroNegocios=Negocio.objects.all().count()
@@ -56,4 +63,4 @@ def usuarios(request):
 		'nroNoticias':nroNoticias,
 	}
 
-	return render(request, 'negocios.html',context)
+	return render(request, 'usuarios.html',context)

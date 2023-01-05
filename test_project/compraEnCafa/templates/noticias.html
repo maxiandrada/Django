@@ -4,8 +4,32 @@
 	<p>Bienvenidos a <em>CompraEnCafa</em>, una aplicación web desarrollada en Django.</p>
 	<h2>Contenido dinámico</h2>
 	<p>Nuestro catálogo se forma de :</p>
-	<ul>
-		<li><strong>Negocios:</strong> {{ nroNegocios }}</li>
-		<li><strong>Noticias:</strong> {{ nroNoticias }}</li>
-	</ul>
+	<h1>Portfolio</h1>
+	<div class="row">
+
+	{% for notice in notices %}
+
+	<div class="col-md-4">
+		<div class="card mb-2">
+
+			<img class="card-img-top" src="{% static notice.imagePortada %}">
+
+			<div class="card-body">
+
+				<h5 class="card-title">{{ notice.titulo }}</h5>
+
+				<p class="card-text">{{ notice.descripcion }}</p>
+
+				<a href="{% url 'noticiaDetalles' notice.pk %}"
+
+				class="btn btn-primary">Leer mas</a>
+			</div>
+		</div>
+	</div>
+
+		{% endfor %}
+
+	</div>
+
+	
 {% endblock %}

@@ -63,7 +63,8 @@ TEMPLATES = [
         # 'DIRS': ['hello/templates/'],
         # 'DIRS': ['catalogo/templates/'],
         # 'DIRS': ['portfolio/templates/'],
-        'DIRS': ['compraEnCafa/templates/'],
+        # 'DIRS': ['compraEnCafa/templates/'],
+        'DIRS': ['compraEnCafa/templates/','portfolio/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
